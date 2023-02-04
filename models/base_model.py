@@ -3,7 +3,6 @@
 from uuid import uuid4
 from datetime import datetime
 
-
 class BaseModel:
     """basemodel class"""
     def __init__(self, id=0, created_at=0, updated_at=0):
