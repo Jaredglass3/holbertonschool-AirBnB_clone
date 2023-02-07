@@ -18,6 +18,26 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """nothing for no input"""
         pass
+def do_create(self, args):
+        """creates new BaseModel"""
+        if (len(args) == 0):
+            print("** class name missing **")
+        elif (args in valid_class.keys()):
+            x = valid_class[args]()
+            x.save()
+            print(x.id)
+        else:
+            print("** class doesn't exist **")
+
+    def do_show(self, args):
+        """shows information"""
+        if (len(args) == 0):
+            print("** class name missing **")
+        elif (args in valid_class.keys()):
+            if len(list_args) == 1:
+                print("** instance id missing **")
+        else:
+            print("** class doesn't exist **")
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
