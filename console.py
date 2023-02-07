@@ -28,8 +28,7 @@ def do_create(self, args):
             print(x.id)
         else:
             print("** class doesn't exist **")
-
-    def do_show(self, args):
+def do_show(self, args):
         """shows information"""
         if (len(args) == 0):
             print("** class name missing **")
